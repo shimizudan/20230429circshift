@@ -1,0 +1,86 @@
+\documentclass[b5paper]{jlreq}  % 文章クラスとオプション設定
+
+\usepackage[top=1cm,bottom=.8cm,left=1cm,right=1cm,foot=.5cm]{geometry}%用紙設定
+\pagestyle{empty}%ページを出力しない%
+\pagestyle{empty}%ページを出力しない%
+\usepackage{luatexja}
+\usepackage{tcolorbox}
+\usepackage{ulem}%下線，波線，取り消し線など
+\usepackage{tabularx}%伸びる表
+\usepackage{emgyouretu}
+%\usepackage{emathMw}
+\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{tikz-3dplot}
+%\tdplotsetmaincoords{70}{115}
+\usepackage{graphicx,color}% 
+\usepackage{emath}
+\usepackage{emathPs}% 
+\usepackage{emathT}
+%\usepackage[hiragino-pro]{luatexja-preset}
+\usepackage[bizud]{luatexja-preset}
+%\usepackage[shortlabels,inline]{enumitem}
+
+%%箇条書き環境
+% \setlist{noitemsep}
+% \setlist[enumerate]{leftmargin=*}
+% \setlist[enumerate,1]{label=\large\textbf{\arabic*.\hspace{.5cm}}, ref=rabic*}
+% \setlist[enumerate,2]{label={(\arabic*)\hspace{.5cm}}, ref={(\arabic*)}}
+% \setlist[enumerate,3]{label={\roman*)\hspace{.5cm}}, ref={\roman*)}}
+
+\def\labelenumi{\Large\textbf\theenumi. }
+\def\theenumii{\arabic{enumii}}
+\def\labelenumii{(\theenumii)}
+\def\theenumiii{\roman{enumiii}}
+\def\labelenumiii{(\theenumiii )}%問題番号
+
+\usepackage{hako}%ハコ環境
+\usepackage{multicol}%段落環境
+\setlength{\columnsep}{1cm}%段落間隔
+%\setlength{\columnseprule}{0.4pt}
+%\usepackage[continue]{emathAe}%解答環境
+%\usepackage{type1cm}% PS, PDF 作成には必要
+%\usepackage[debug]{emathPs}%描画eps作成
+\usepackage{showexample}%\itemboxなど
+
+% \def\thesection{No. \arabic{section}}
+% \def\Name#1{\section{\large\bf #1\hfill\underline{ \hspace{1zw}年\hspace{2zw}組\hspace{2zw}番名前\hspace{12zw}}}}
+
+%%%%%太字%%%%
+%\def\bf{\gtfamily\bfseries}
+\usepackage[e]{esvect} % パッケージをインクルード
+\newcommand{\Beku}[1]{{\vv{\mathstrut #1 }}}
+\renewcommand{\bekutoru}[1]{{\vv{\mathrm{#1}}}}
+%問題・解答・コメントの表示・非表示
+
+%\newif\ifquestion\questionfalse
+\newif\ifquestion\questiontrue
+
+\newif\ifanswer\answerfalse
+%\newif\ifanswer\answertrue
+
+%\newif\ifcomment\commentfalse
+\newif\ifcomment\commenttrue
+
+\def\thesection{\arabic{section}}
+\def\thesubsection{}
+
+\begin{document}
+
+\begin{tcolorbox}[title=作られる偶数・奇数の割合 ,width=10cm,fonttitle=\gtfamily\sffamily\bfseries,colframe=black!50,colback=black!3]
+0,1,2,3,4,5の数字があり，これらを並べてできる4桁の数を作ります。(1)〜(4)の作り方で偶数と奇数の数が同じものはどれでしょうか？（最高位に0がくるものはだめです。）
+\begin{enumerate}[(1)]
+    \item 同じ数字を使ってはいけない。
+    \item 同じ数字を2回まで使ってよい。
+    \item 同じ数字を3回まで使ってよい
+    \item 同じ数字を何回でも使ってよい。
+\end{enumerate}
+
+\end{tcolorbox}
+
+\begin{enumerate}[(1)]
+    \item 偶数156個，奇数144個
+    \item 偶数537個，奇数513個
+    \item 偶数595個，奇数570個
+    \item 
+\end{enumerate}
+\end{document}
